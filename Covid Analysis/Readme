@@ -1,7 +1,98 @@
-Web Scraping and Basic Data Analysis on COVID Data using Python
-A basic project in Python and Jupyter Notebook, to scrape and analyse some Coronavirus-related data.
+Web Scraping Covid Data Report
 
-app.py is the Python source code for scraping data from worldometers.info. It uses BeautifulSoup library to parse the data from the website. The resultant data is stored in csv format with the file name corona.csv.
+Udaykumar Shelke
+College of Engineering
+Northeastern University
+Boston, MA
+Shelke.u@northeastern.edu
+1.	INTRODUCTION:
 
-Basic data analysis is done on the corona.csv file using Jupyter Notebook.(data_processing.ipynb).
-The data is checked, and duplicate and unnecessary rows are removed. Column data types are changed to more suitable formats. Graphical representation of the data is demonstrated.
+The scope of this project encompasses the web scraping and elementary analysis of COVID-19 data, utilizing Python and Jupyter Notebook to extract and analyze the data. It is segmented into two primary components: data extraction from a live webpage using a Python script and the subsequent analysis using a Jupyter Notebook.
+
+2.	ASBTRACT: 
+                 
+This project focuses on web scraping and basic data analysis of COVID-19 data using Python and Jupyter Notebook. The Python script, named "app.py", is crafted to extract real-time Coronavirus-related data from the "worldometers.info" website, utilizing the BeautifulSoup library for parsing the HTML content of the webpage.
+
+The extracted data encompasses various aspects related to COVID-19 and is stored in a CSV file named "corona.csv". This CSV file is then subjected to preliminary data analysis, executed in a Jupyter Notebook file named "ass_1.ipynb". Within this analysis, data cleaning is performed to eliminate duplicate and unnecessary rows, and the data types of columns are refined to bolster the ease of analysis.
+
+Furthermore, the cleaned data is represented graphically to provide visual insights, enhancing the understanding of the ongoing trends and patterns associated with the COVID-19 data. This project, combining web scraping and data analysis, serves as a comprehensive tool for acquiring and analyzing updated data related to the COVID-19 pandemic efficiently.
+  
+
+
+3.	DATASET DESCRIPTION:
+
+Overview:
+The dataset provides a comprehensive overview of the ongoing impact of the COVID-19 pandemic across various countries. It consists of updated statistics that cover different aspects of the pandemic, allowing for a multifaceted analysis of the spread and control of the virus worldwide.
+
+Dataset Attributes:
+The dataset is structured with the following columns, each capturing a specific dimension of the pandemic:
+
+Country: Indicates the country for which the COVID-19 data is reported.
+TotalCases: The cumulative number of confirmed COVID-19 cases in each country.
+NewCases: The number of new COVID-19 cases reported in the last 24 hours or the most recent reporting period.
+TotalDeaths: The total number of deaths attributed to COVID-19 in each country.
+NewDeaths: The number of new deaths reported due to COVID-19 in the last 24 hours or the most recent reporting period.
+TotalRecovered: Indicates the total number of individuals who have recovered from COVID-19 in each country.
+NewRecovered: The number of new recoveries from COVID-19 reported in the last 24 hours or the most recent reporting period.
+ActiveCases: Represents the current number of active COVID-19 cases, calculated by subtracting the total number of recoveries and deaths from the total number of confirmed cases.
+
+
+4.	DATA CHARACTERISTICS:
+The data characteristics refer to the specific attributes and features that describe and give context to the data. In the case of your COVID-19 dataset, here are the key data characteristics:
+1. Multivariate:
+The dataset contains multiple variables (columns) like Total Cases, New Cases, Total Deaths, etc., each offering a different perspective on the COVID-19 pandemic.
+2. Time-Series and Cross-Sectional:
+The data can be treated as time-series when tracking the evolution of COVID-19 metrics over time for each country.
+It can also be considered as cross-sectional when comparing different countries at a specific point in time.
+3. Quantitative:
+Most of the data are quantitative, representing counts (e.g., total cases, new deaths) that can be measured and analyzed statistically.
+4. Categorical:
+The ‘Country’ column is categorical, representing different categories or groups (each country being a separate category).
+5. Discrete Data:
+The counts of cases, deaths, and recoveries are discrete data, meaning they can only take on distinct, separate values.
+6. Non-Negative:
+As the dataset represents counts (e.g., cases, deaths, recoveries), the values are non-negative.
+7. Dynamic:
+The data is dynamic, constantly changing and being updated as new information becomes available each day.
+8. Granularity:
+The data is granular at the country level, with each row potentially representing the counts for a specific country.
+9. Missing Values:
+Depending on the data source and availability, there might be missing values, especially for ‘New Cases’, ‘New Deaths’, and ‘New Recoveries’, if updates are not provided daily for some countries.
+10. Potential for Aggregation:
+Data can be aggregated to derive continent or global level insights, or can be disaggregated, if more granular data (like state or city-level data) is available.
+
+5.	DATA EXTRACTION (app.py)
+
+Objective:
+To scrap real-time COVID-19 data from worldometers.info, parse, and store it in a CSV file for analysis.
+Methodology:
+•	Utilized Python’s requests library to make an HTTP request to the target URL and retrieve the HTML content.
+•	Employed BeautifulSoup to parse and extract the desired data from the HTML content.
+•	Created custom functions to facilitate the extraction of textual data from the HTML tags.
+•	Extracted relevant data including total cases, new cases, total deaths, among others, for various countries and stored them in a structured CSV file named ‘corona.csv’.
+Key Python Libraries Used:
+•	requests: For fetching the web page's HTML content.
+•	BeautifulSoup: For parsing the HTML and extracting the required data.
+•	csv: For writing the extracted data into a CSV file.
+
+
+6.	Data Analysis (ass_1.ipynb)
+Objective:
+To perform a basic analysis on the extracted COVID-19 data, clean it, and visualize the findings to gain insights into the current state of the pandemic globally.
+Methodology:
+•	Loaded the ‘corona.csv’ file into a Jupyter Notebook for analysis.
+•	Checked the dataset for any inconsistencies, duplicate, or unnecessary rows and removed them to clean the data.
+•	Transformed the column data types to more suitable formats for effective analysis.
+•	Employed graphical tools to visualize the data, offering visual insights into the spread, recovery, and fatalities due to COVID-19 across different countries.
+Key Processes:
+•	Data Cleaning: Ensured the data's accuracy and consistency by removing duplicates and unnecessary data, ensuring high-quality data for analysis.
+•	Data Transformation: Adapted the data into suitable formats to facilitate easy and accurate analysis.
+•	Data Visualization: Employed graphical representations to provide a visual account of the data, making it easier to identify trends, patterns, and anomalies.
+
+
+
+7.	CONCLUSION
+
+This project exemplifies the effective combination of web scraping and data analysis to gather real-time data and draw actionable insights. The Python script 'app.py' successfully extracts up-to-date COVID-19 data from a live web source, while the Jupyter Notebook 'ass_1.ipynb' facilitates the in-depth analysis and visualization of this data.
+
+The insights drawn from this project are instrumental for a myriad of stakeholders, including policymakers, healthcare professionals, and the general public, offering a real-time glimpse into the ongoing pandemic’s dynamics. Future enhancements could include more advanced analytical techniques, predictive modeling, and extending the dataset to include more granular and diverse data points to enrich the analysis.
